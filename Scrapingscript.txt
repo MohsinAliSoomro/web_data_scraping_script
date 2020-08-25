@@ -1,0 +1,25 @@
+$0
+var wholetable=$$("tr",$0)
+
+var tempobj=[];
+for(var i=0;i<wholetable.length;i++){
+    	tempobj[i]={Symbol:"",Price:"",Type:"",Strike:"",Exp:"",DTE:"",Bid:"",Midpoint:"",Ask:"",Last:"",Volume:"",OpenInt:"",Vol:"",IV:"",lastTrade:""};
+    	tempobj[i].Symbol=wholetable[i].cells[0].innerText;
+	tempobj[i].Price=wholetable[i].cells[1].innerText;
+	tempobj[i].Type=wholetable[i].cells[2].innerText;
+	tempobj[i].Strike=wholetable[i].cells[3].innerText;
+	tempobj[i].Exp=wholetable[i].cells[4].innerText;
+	tempobj[i].DTE=wholetable[i].cells[5].innerText;
+	tempobj[i].Bid=wholetable[i].cells[6].innerText;
+	tempobj[i].Midpoint=wholetable[i].cells[7].innerText;
+	tempobj[i].Ask=wholetable[i].cells[8].innerText;
+	tempobj[i].Last=wholetable[i].cells[9].innerText;
+	tempobj[i].Volume=wholetable[i].cells[10].innerText;
+	tempobj[i].OpenInt=wholetable[i].cells[11].innerText;
+	tempobj[i].Vol=wholetable[i].cells[12].innerText;
+	tempobj[i].IV=wholetable[i].cells[13].innerText;
+	tempobj[i].lastTrade=wholetable[i].cells[14].innerText;
+}
+
+
+copy(JSON.stringify(tempobj))
